@@ -40,13 +40,19 @@
 
               </div><!-- //. widget -->
                         <div class="widget widget_categories"><!-- widget  -->
-                                                        <x-categories-widget/>
+                                <h4 class="widget-title">Categories</h4>
+                               <ul>                            <ul>
+                           @foreach ($categories as $category)
+                          <x-categories-widget :category='$category'/>
+                           @endforeach
+                               </ul>
                         </div>
                         <div class="widget widget_popular_posts"><!-- widget  -->
                             
                             <ul>
                                 
-                                <x-popular-post-item/>
+                                <x-popular-post-item :post='$posts[0]'/>
+                                
                             </ul>
                         </div>
                         <div class="widget widget_tag_cloud"><!-- widget tags-->

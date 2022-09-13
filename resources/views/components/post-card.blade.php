@@ -9,8 +9,8 @@
         <div class="content">
             <ul class="post-meta">
                 <li><a href="#">{{$post->created_at->diffForHumans()}}</a></li>
-                <li><a href="#">By Adam helen</a></li>
+                <li><a href="blog/?author={{ $post->author->username }}">{{$post->author->name}}</a></li>
             </ul>
             <h4 class="title"><a href="blog/{{$post->slug}}">{{$post->title}}</a></h4>
-            <a href="#" class="readmore">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+            <a href="blog/{{$post->slug}}" class="readmore">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
         

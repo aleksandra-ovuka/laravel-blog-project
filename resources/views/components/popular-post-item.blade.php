@@ -4,15 +4,18 @@
     <ul>
 
 
-
+     
 <li class="single-popular-post-item"><!-- single popular post item -->
     <div class="thumb">
-        <img src="assets/img/popular-post/01.jpg" alt="popular post image">
+        <img src="/assets/img/popular-post/01.jpg" alt="popular post image">
     </div>
     <div class="content">
-        <span class="time">June 20, 18</span>
-        <h4 class="title"><a href="#">Aliquam eu mauris euismod lacus vel.</a></h4>
+        @if (isset($post))
+        <span class="time">{{$post->created_at->diffForHumans()}}</span>
+        <h4 class="title"><a href="blog/{{$post->slug}}">{{$post->title}}</a></h4>
+        @endif
     </div>
 </li><!-- //. single popular post item -->
     </ul>
+   
 </div>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
@@ -21,6 +23,7 @@ Route::get('/', function () {
 
 //All Posts
 Route::get('/blog',[PostController::class, 'blog'])->name('blog');
+
 
 
 //Single Post

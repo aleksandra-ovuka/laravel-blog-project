@@ -16,7 +16,7 @@
                         <div class="entry-content">
                             <ul class="post-meta">
                                 <li><a href="#"><i class="far fa-calendar-alt"></i> {{$post->created_at->diffForHumans()}}</a></li>
-                                <li><a href="#"><i class="far fa-user"></i> Admin</a></li>
+                                <li><a href="#"><i class="far fa-user"></i> {{$post->author->name}}</a></li>
                                 <x-tags :tagsCsv='$post->tags'/>
                             </ul>
                             <h4 class="title">{{$post->title}}  </h4>
@@ -55,7 +55,12 @@
 
     <x-search/>
     <x-tag-widget :post='$post'/>
-    <x-categories-widget/>
+    <div>
+        <h6> Category: </h6>
+        {{$post->category->name}}
+    </div>
+
+
     <x-popular-post-item/>
    
 

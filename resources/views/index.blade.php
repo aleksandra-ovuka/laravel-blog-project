@@ -57,5 +57,5 @@
   </section>
 <!-- team member area end -->
 
-@include('_footer')
+
 </x-layout>
